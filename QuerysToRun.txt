@@ -1,0 +1,29 @@
+mutation {
+  createUser(userInput: {name: "Anthony", email: "anthony@test.com", password: "test22"}) {
+    _id
+    name
+    email
+  }
+}
+
+query {
+  	getUser(id: "5d7b7aaa77a05b7b5a4d8b86") {
+    	_id,
+    	name,
+    	email
+  	}
+}
+
+
+mutation {
+  updateUser(userInput: {name: "Anthony2", email: "anthony@test.com"}){
+    _id,
+    name,
+    email
+  }
+}
+
+
+mutation {
+  deleteUser(email: "anthony@test.com")
+}
